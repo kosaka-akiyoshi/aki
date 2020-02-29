@@ -10,8 +10,8 @@
     <title>taskParameter</title>
 </head>
 <body>
-    <p><?php echo('1000 + 10 = . (1000 + 10)'です。'); ?></p>
-</body>
-<body>
+    <p><?php echo('str1は、.$_GET['fruit'].); ?></p><br/>
+    <p><?php echo('str2は、.$_GET['animal'].); ?></p><br/>
+    <p><?php echo('str3は、.$_GET['instrument'].); ?></p>
 </body>
 </html>
