@@ -1,6 +1,14 @@
 <?php
-
-?>
+    $apple = 110;
+    $orange = 80;
+    const TAX = 0.1;
+    $answer1 = $apple * 15;
+    $answer2 = $orange * 12;
+    $answer3 = $answer1 + $answer2;
+    $answer4 = $answer3 + ($answer3 * TAX);
+    $answer05 = $answer3 / (15 + 12);
+    $answer5 = round($answer05, 0);
+    ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,23 +19,14 @@
 </head>
 <body>
 <p><?php
-        $apple = 110;
-        $answer1 = $apple * 15;
             echo("answer1 = " .  $answer1); ?></p>
 <p><?php
-        $orange = 80;
-        $answer2 = $orange * 12;
             echo("answer2 = " .  $answer2); ?></p>
 <p><?php
-        $answer3 = $answer1 + $answer2;
             echo("answer3 = " .  $answer3); ?></p>
 <p><?php
-        const TAX = 0.1;
-        $answer4 = $answer3 + ($answer3*TAX);
             echo("answer4 = " .  $answer4); ?></p>
-<p><?php
-        $answer05 = $answer3 / (15 + 12);
-        $answer5 = round($answer05, 0);
+<p><?php        
             echo("answer5 = " .  $answer5); ?></p>
 
 </body>
