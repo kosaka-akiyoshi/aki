@@ -14,14 +14,12 @@
             echo( "( 1 + 3 ) * 5 = ". ( 1 + 3 ) * 5 ); ?></p>
     <p><?php
             echo( "round( 22 / 3 , 2 ) = ". round( 22 / 3 , 2 ) ); ?></p>
-        //
     <p><?php
             echo( "ceil( 22 / 3 ) = ". ceil( 22 / 3 ) ); ?></p>
-            //floor
     <p><?php
             echo( "floor( 22 / 3 ) = ". floor( 22 / 3 ) ); ?></p>
     <p><?php
             echo( "round( 5 / 36 , 1 ) = " 
-            . round( ( 2 / 1 ) / 36 , 1 )); ?></p>  
+            . round( 5 / 36 , 1 )); ?></p>  
 </body>
 </html>
