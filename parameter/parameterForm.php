@@ -10,11 +10,11 @@
     <title>taskParameter</title>
 </head>
 <body>
-<form action="http://localhost/aki/parameter/parameterPost.php"method="POST">
-str1:<input type=input type="text"name="dog"/></br>
-str3:<input type=input type="text"name="monkey"/></br>
-str2:<input type=input type="text"name="bird"/></br>
-<input type="submit" value="表示">
-</form>
+    <form action="http://localhost/aki/parameter/parameterPost.php"method="POST">
+        str1:<input type=input type="text"name="str1"/></br>
+        str3:<input type=input type="text"name="str2"/></br>
+        str2:<input type=input type="text"name="str3"/></br>
+        <input type="submit" value="表示">
+    </form>
 </body>
 </html>

@@ -10,22 +10,25 @@
     <title>taskParameter</title>
    <style type="text/css">
    <!--
-   .akafutoji{
-       color:red;
-       font-weight:bold;
-   }
+        .akafutoji{ color:red; font-weight:bold; }
    -->
    </style>
 </head>
 <body>
-<p><?php echo('str1は、'); ?>
-<span class="akafutoji"><?php echo($_POST['dog']);?></span>
-<?php echo('です。'); ?></p>
-<p><?php echo('str2は、'); ?>
-<span class="akafutoji"><?php echo($_POST['bird']);?></span>
-<?php echo('です。'); ?></p>
-<p><?php echo('str3は、'); ?>
-<span class="akafutoji"><?php echo($_POST['monkey']);?></span>
-<?php echo('です。'); ?></p>
+    <p>
+        <?php echo('str1は、'); ?>
+        <span class="akafutoji"><?php echo($_POST['str1']);?></span>
+        <?php echo('です。'); ?>
+    </p>
+    <p>
+        <?php echo('str2は、'); ?>
+        <span class="akafutoji"><?php echo($_POST['str2']);?></span>
+        <?php echo('です。'); ?>
+    </p>
+    <p>
+        <?php echo('str3は、'); ?>
+        <span class="akafutoji"><?php echo($_POST['str3']);?></span>
+        <?php echo('です。'); ?>
+    </p>
 </body>
 </html>
