@@ -1,0 +1,2 @@
+rand — 乱数を生成する
+rand ( int $min , int $max ) : int
