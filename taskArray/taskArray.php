@@ -1,3 +1,4 @@
+
 <?php
     $averageSalaryArray = [
         2018 => 4410000,
