@@ -1,4 +1,18 @@
 
+<?php
+    $string = "100"; $number = 100;
+    
+    $language = rand( 1,100 ); 
+    $math = rand( 1,100 );
+    $science = rand( 1,100 );
+    $society = rand( 1,100 );
+    $english = rand( 1,100 );
+    $Grade = ( $language + $math + $science + $society + $english ) / 5;
+    $allGrade = 67.3;
+
+    $case = '1';
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,7 +22,6 @@
     <title>taskBranch</title>
 </head>
 <body>
-        <?php $string = "100"; $number = 100; ?>
     <p>
         <?php //task 1 - 1
         if($string == $number){
@@ -38,15 +51,6 @@
         echo("\$string100は100以上ではありません。<br>");
         } ?>
     </p>
-        <?php 
-        $language = rand( 1,100 ); 
-        $math = rand( 1,100 );
-        $science = rand( 1,100 );
-        $society = rand( 1,100 );
-        $english = rand( 1,100 );
-        $Grade = ( $language + $math + $science + $society + $english ) / 5;
-        $allGrade = 67.3;
-        ?>
     <p> 
         <?php //task 2 - 1
          echo("A君の平均点は" . $Grade . "点です。<br>"); 
@@ -59,7 +63,6 @@
             } 
         ?>
     </p>
-        <?php $case = '1'; ?>
     <p> 
         <?php //task 3 - 1
             switch($case){
