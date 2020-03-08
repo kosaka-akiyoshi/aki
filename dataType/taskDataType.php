@@ -15,13 +15,9 @@
     <title>taskDataType</title>
 </head>
 <body>
-    <p><?php 
-        echo("課題１<br/>りんごが{$number}個あります。"); ?></p>
-    <p><?php 
-        echo("課題２<br/>" . $escape); ?></p>
-    <p><?php 
-        echo("課題３<br/>" . $string); ?></p>
-    <p><?php 
-        echo("課題４<br/>" . GREETING . "、$name"); ?></p>
+    <p><?php echo("りんごが{$number}個あります。"); ?></p>
+    <p><?php echo($escape); ?></p>
+    <p><?php echo($string); ?></p>
+    <p><?php echo(GREETING . "、$name"); ?></p>
 </body>
 </html>
