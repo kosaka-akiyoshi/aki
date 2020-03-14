@@ -3,7 +3,7 @@
     $escape = "string型を使用するときに、ダブルクオート(\")を表示する場合は、バックスラッシュ(\)が必要です。";
     $string = 'I\'m Security Enginner';
     const GREETING = "こんばんは";
-    $name = "太郎君";
+    $name = "太郎くん";
 
 ?>
 <!DOCTYPE html>
