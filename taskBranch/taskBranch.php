@@ -25,38 +25,42 @@
     <p>
         <?php //task 1 - 1
         if($string == $number){
-        echo("\$string100は100です。<br>");
-        } else {
-        echo("\$string100は100ではありません。<br>");
-        } ?>
+            echo("\$string100は100です。<br>");
+            } else {
+            echo("\$string100は100ではありません。<br>");
+            }
+        ?>
 
         <?php //task 1 - 2
         if($string === $number){
-        echo("\$string100は100です。<br>");
-        } else {
-        echo("\$string100は100ではありません。<br>");
-        } ?>
+            echo("\$string100は100です。<br>");
+            } else {
+            echo("\$string100は100ではありません。<br>");
+            } 
+        ?>
 
         <?php //task 1 - 3
-        if($string > $number){
-        echo("\$string100は101以上です。<br>");
-        } else {
+            if($string > $number){
+            echo("\$string100は101以上です。<br>");
+            } else {
         echo("\$string100は101以上ではありません。<br>");
-        } ?>
+            } 
+        ?>
 
         <?php //task 1 - 4
         if($string >= $number){
-        echo("\$string100は100以上です。<br>");
-        } else {
-        echo("\$string100は100以上ではありません。<br>");
-        } ?>
+            echo("\$string100は100以上です。<br>");
+            } else {
+            echo("\$string100は100以上ではありません。<br>");
+            } 
+        ?>
     </p>
     <p> 
         <?php //task 2 - 1
-         echo("A君の平均点は" . $Grade . "点です。<br>"); 
+        echo("A君の平均点は" . $Grade . "点です。<br>"); 
         ?>
         <?php //task 2 - 2
-         if($Grade >= $allGrade){
+        if($Grade >= $allGrade){
             echo("A君の平均点は67.3以上です。<br>");
             } else {
             echo("A君の平均点は67.3未満です。<br>");
@@ -98,7 +102,7 @@
         
                 default:
                     echo 'other<br>';
-        } 
+                } 
         ?>
     </p>
 </body>
