@@ -1,6 +1,6 @@
 
 <?php 
-    $AkunArray = [
+    $akunArray = [
         '国語' => 85,
         '数学' => 64,
         '社会' => 45,
@@ -9,9 +9,9 @@
 
     ];
 
-    $AkunSubject = '理科';
+    $akunSubject = '理科';
 
-    $BkunArray = [
+    $bkunArray = [
         '国語' => 56,
         '数学' => 89,
         '社会' => 73,
@@ -19,11 +19,11 @@
         '英語' => 78,
     ];        
 
-    $BkunSubject = '英語';
+    $bkunSubject = '英語';
 
-    $allAkunPoint = array_sum($AkunArray);
-    $AkunElement = count($AkunArray);
-    $averageAkunPoint = $allAkunPoint / $AkunElement;
+    $allAkunPoint = array_sum($akunArray);
+    $akunElement = count($akunArray);
+    $averageAkunPoint = $allAkunPoint / $akunElement;
 
     //全員の成績の2次元配列
     $grade = [
@@ -53,15 +53,15 @@
 
     ];
 
-    $CkunArray = $grade['C点数'];
-    $allCkunPoint = array_sum($CkunArray);
-    $CkunElement = count($CkunArray);
-    $averageCkunPoint = $allCkunPoint / $CkunElement;
+    $ckunArray = $grade['C点数'];
+    $allCkunPoint = array_sum($ckunArray);
+    $ckunElement = count($ckunArray);
+    $averageCkunPoint = $allCkunPoint / $ckunElement;
 
-    $AkunMathPoint = $grade['A点数']['数学'];
-    $BkunMathPoint = $grade['B点数']['数学'];
-    $CkunMathPoint = $grade['C点数']['数学'];
-    $allMathPoint = $AkunMathPoint + $BkunMathPoint + $CkunMathPoint;
+    $akunMathPoint = $grade['A点数']['数学'];
+    $bkunMathPoint = $grade['B点数']['数学'];
+    $ckunMathPoint = $grade['C点数']['数学'];
+    $allMathPoint = $akunMathPoint + $bkunMathPoint + $ckunMathPoint;
     $gradeElement = count($grade);
     $averageMathPoint = $allMathPoint / $gradeElement;
 
@@ -76,8 +76,8 @@
     <title>taskAssociativeArray</title>
 </head>
 <body>
-    <p><?php echo('A君の' . $AkunSubject . 'の点数は' . $AkunArray[$AkunSubject] .'点です。'); ?></p>
-    <p><?php echo('B君の' . $BkunSubject . 'の点数は' . $BkunArray[$BkunSubject] .'点です。'); ?></p>
+    <p><?php echo('A君の' . $akunSubject . 'の点数は' . $akunArray[$akunSubject] .'点です。'); ?></p>
+    <p><?php echo('B君の' . $bkunSubject . 'の点数は' . $bkunArray[$bkunSubject] .'点です。'); ?></p>
     <p><?php echo('A君の平均点は' . $averageAkunPoint . '点です。'); ?></p>
     <p><?php echo('C君の平均点は' . $averageCkunPoint . '点です。'); ?></p>
     <p><?php echo('数学の平均点は' . $averageMathPoint . '点です。'); ?></p>
