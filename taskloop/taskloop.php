@@ -187,7 +187,7 @@
 </p>
 <table border = 1 >
     <!--一行目の処理-->
-    <?php foreach ( $grade2 as $menber => $tensu_array ){ ?>
+    <?php foreach ($grade2 as $menber => $tensu_array){ ?>
     <tr>
     <!--一列目の処理-->
     <?php foreach($tensu_array as $kyouka => $tensu){ ?>
