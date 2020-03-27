@@ -22,12 +22,12 @@
     </p>
     <p>
         <?php echo('str2は、'); ?>
-        <span class="akafutoji"><?php echo($_POST['str2']);?></span>
+        <span class="akafutoji"><?php echo($_POST['str3']);?></span>
         <?php echo('です。'); ?>
     </p>
     <p>
         <?php echo('str3は、'); ?>
-        <span class="akafutoji"><?php echo($_POST['str3']);?></span>
+        <span class="akafutoji"><?php echo($_POST['str2']);?></span>
         <?php echo('です。'); ?>
     </p>
 </body>
