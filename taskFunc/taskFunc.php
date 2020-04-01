@@ -14,14 +14,13 @@
 <?php
     //task1
     $task1 = ["関数で文字列を表示!","254 × 322 = 81788"];
-    function display(array $mojiretsu): string
+    function display(array $mojiretsu):
     {
         for($i = 0; $i < count($mojiretsu); $i++) {
             echo("<pre>");
             echo($mojiretsu[$i]);
             echo("</pre>");    
         }
-        return '';
         
     }
     display($task1);
@@ -31,9 +30,9 @@
     {
         $randomArray =[];
         for ($count = 0; $count < 10; $count++){
-        $randomArray[$count] =rand(1,100);
+            $randomArray[$count] =rand(1,100);
         }
-    return $randomArray;
+        return $randomArray;
     }
     echo("<pre>");
     var_dump(createRandomNumberArray());
@@ -69,15 +68,17 @@
         28,
     ];
 
-    /* 先生に質問した内容 key値の取り出し方
-    for($count5 = 0; $count5 < 10; $count5++)
+    /*
+    for($count5 = 0; $count5 < 20; $count5++)
     {
-        
-        $kagi = key($data);
-        var_dump($kagi);
-        echo(next($data));
+
+        $new = key($data);
+        $tugi = next($data);
+        echo($new);
+
     }
     */
+    
 
 
     $syosu = 0;

@@ -183,13 +183,13 @@
     
         array_unshift($grade2, $ue_array);
         array_push($grade2, $kyouka_average_array); 
-    ?>
+    ?>  
 </p>
 <table border = 1 >
-    <!--一行目の処理-->
+    <!--行の処理内容-->
     <?php foreach ($grade2 as $menber => $tensu_array){ ?>
     <tr>
-    <!--一列目の処理-->
+    <!--列の処理内容-->
     <?php foreach($tensu_array as $kyouka => $tensu){ ?>
     <!--表示-->　
     <td> <?php echo("$tensu") ?> </td>

@@ -25,10 +25,9 @@
 <?php 
     $randomInsu = rand(1, 15);
     $random = randomRecursiveClac($randomInsu);
-    $syori = count($random['rand_num']);
     $goukei = $random['num'];
     
-    echo("処理回数:".$syori."</br>合計:".$goukei."</br>");  
+    echo("処理回数:".$randomInsu."</br>合計:".$goukei."</br>");  
 ?>
 <style type>
 table td {
