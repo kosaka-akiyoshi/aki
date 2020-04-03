@@ -14,14 +14,13 @@
 <?php
     //task1
     $task1 = ["関数で文字列を表示!","254 × 322 = 81788"];
-    function display(array $mojiretsu):
+    function display(array $mojiretsu)
     {
         for($i = 0; $i < count($mojiretsu); $i++) {
             echo("<pre>");
             echo($mojiretsu[$i]);
             echo("</pre>");    
-        }
-        
+        }    
     }
     display($task1);
 
@@ -39,9 +38,9 @@
     echo("</pre>");
 
     //task3
-    function createRandomNumberArrayAndDisplay(callable $function)
+    function createRandomNumberArrayAndDisplay()
     {
-        $syori_array = $function();
+        $syori_array = createRandomNumberArray();
         $syorigo_array = [];
         for ($count = 0; $count < 10; $count++){
             $kazu = $count + 1;
@@ -50,8 +49,8 @@
             $syorigo_array[$count] = $syori2;
         }
         display($syorigo_array);
-        }
-    createRandomNumberArrayAndDisplay('createRandomNumberArray');
+    }
+    createRandomNumberArrayAndDisplay();
 
     
     $data = 
@@ -78,56 +77,35 @@
 
     }
     */
-    
 
-
-    $syosu = 0;
     //task4
-    function numberAverageClac1(array $array1, int $syosu):float
+    function numberAverageClac(array $array, int $int): float
     {
-        foreach ($array1 as $key => $val){
-        //foreachで要素の値をすべて合算。　入れ物として$syosu = 0;をあらかじめ定義
-        $syosu += $val;
-        }
-        $dataElement = count($array1);
-        $averageData1 = round($syosu / $dataElement, 1);
-
-        return $averageData1;
+        $all = array_sum($array);
+        $element = count($array);
+        //小数点の位を調整するために$intを定義
+        $average = round($all / $element, $int);
+        return $average;
     }
-    function numberAverageClac2(array $array2):float
-    {
-        $allData = array_sum($array2);
-        $arrayElement = count($array2);
-        $averageData2 = round($allData / $arrayElement, 0);
+    $averageAnswer1 = numberAverageClac($data,0);
+    $averageAnswer2 = numberAverageClac($data,1);
 
-        return $averageData2;
-    }
-    $averageAnswer1 = numberAverageClac1($data,$syosu);
-    $averageAnswer2 = numberAverageClac2($data);
-
-    $answer42_array =   
-    [
+    $answer42_array = [
         "平均は（小数点1位は四捨五入）は".$averageAnswer1."です！",
         "平均は（小数点2位は四捨五入）は".$averageAnswer2."です！"
     ];
     display($answer42_array);
 
-    
-    function overAverage(array $array1, int $syosu):int
+    function overAverage(array $array):int
     {
-        foreach ($array1 as $key => $val)
-        {
-            $syosu += $val;
-        }
-        $dataElement = count($array1);
-        $averageData1 = round($syosu / $dataElement, 0);
+        $average = numberAverageClac($array,0);
         
         //個数を調べるため、最初に0を定義
         $new = 0;
         //new_array = [];
-        foreach ($array1 as $key => $val)
+        foreach ($array as $key => $val)
         {
-            if($averageData1 <= $val)
+            if($average <= $val)
             {
                 $new++;
                 //new_array[] = val;
@@ -136,12 +114,10 @@
         //$countData = count($new_array);
         //return $countData;
         return $new;
-        ;
     }
 
-    $countAnswer = overAverage($data,$syosu);
+    $countAnswer = overAverage($data,0);
     $count_array = ["平均以上は".$countAnswer."個です！"];
-    
     display($count_array);
 ?>
 </p>
