@@ -11,21 +11,22 @@
 </head>
 <body>
 <?php
-    //task1
+
     $hatiyon = 84;
     $sannana = 37;
-    $ans = calcNumber($hatiyon, $sannana, true);
-    $ans2 = calcNumber($hatiyon, $sannana, false);
+    //task1
+    $pulas = calcNumber($hatiyon, $sannana, true);
+    $mainas = calcNumber($hatiyon, $sannana, false);
     
-    echo($hatiyon."＋".$sannana."＝".$ans."</br>");
-    echo($hatiyon."－".$sannana."＝".$ans2."</br>");
+    echo($hatiyon."₊".$sannana."=".$pulas."</br>");
+    echo($hatiyon."-".$sannana."=".$mainas."</br>");
 
     //task2
-    $ni = $kaizyou($hatiyon, true);
-    $san = $kaizyou($sannana, false); 
+    $kakeru2 = $kaizyou($hatiyon, true);
+    $kakeru3 = $kaizyou($sannana, false); 
 
-    echo($hatiyon."の2乗は".$ni."</br>");
-    echo($sannana."の3乗は".$san."</br>"); 
+    echo($hatiyon." の2乗は ".$kakeru2."</br>");
+    echo($sannana." の3乗は ".$kakeru3."</br>"); 
 
     //task3
     //平均点
@@ -57,44 +58,44 @@
     ];
 
     //task3 - 1
-    $zenkamoku = calcAverage($averageScore);
-    $aHeikin = calcAverage($aScore);
+    $averageAverageScore = calcAverage($averageScore);
+    $aAverageScore = calcAverage($aScore);
 
-    echo("全科目の平均点は".$zenkamoku."です。</br>");
-    echo("Aくんの平均点は".$aHeikin."です。</br>"); 
+    echo("全科目の平均点は".$averageAverageScore."点です。</br>");
+    echo("Aくんの平均点は".$aAverageScore."点です。</br>"); 
 
     //task3 - 2
     $hikaku_array = differenceScore($averageScore, $aScore);
 
     $kyouka_array = [];
     foreach($subjectTitle as $key => $value) {
-        $yoso = $subjectTitle[$key];
-        $kyouka_array[] = $yoso;
+        $kyouka = $subjectTitle[$key];
+        $kyouka_array[] = $kyouka;
     }; 
             
-    for($count = 0; $count < 5; $count++) {
-        $atai = $hikaku_array[$count];
+    foreach($hikaku_array as $key1 => $value1) {
+        $atai = $hikaku_array[$key1];
         $zettai =abs($atai);
-        $kyouka = $kyouka_array[$count];
+        $kyouka = $kyouka_array[$key1];
 
         if($atai < 0){
-            $nakahikaku = $kyouka."は平均点より".$zettai."点高いです。";
+            $nakahikaku = $kyouka."は、平均点より".$zettai."点高いです。";
         }
         elseif($atai == 0){
-            $nakahikaku = $kyouka."は平均点と同じです。";
+            $nakahikaku = $kyouka."は、平均点と同じです。";
         }
         elseif($atai > 0){
-            $nakahikaku = $kyouka."は平均点より".$zettai."点低いです。";
+            $nakahikaku = $kyouka."は、平均点より".$zettai."点低いです。";
         }
         $after_array[$kyouka] = $nakahikaku;
     };
 
-    $hikaku =[];
-    foreach($after_array as $key2 => $val2){
-        $hikaku[] = $after_array[$key2];
+    $after_hikaku = [];
+    foreach($after_array as $key2 => $value2){
+        $after_hikaku[] = $after_array[$key2];
     };
 
-    $moji_hikaku = implode("</br>", $hikaku);
+    $moji_hikaku = implode("</br>", $after_hikaku);
     echo("$moji_hikaku");
 ?>
 </body>
