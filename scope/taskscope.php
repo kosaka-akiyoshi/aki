@@ -1,14 +1,20 @@
 <?php
     function randomRecursiveClac(int $int1): array
     {
+        //ランダム値を格納
         static $random_array = [];
         static $goukei = 0;
         for($count = 1; $count <= $int1; $count++){
             $hyakuRandom = rand(1, 100);
             $random_array['rand_num'][$count] = $hyakuRandom;
-            $goukei += $hyakuRandom;
         };
-        $random_array['num'] = $goukei;
+
+        //合計値を計算、格納
+        for($count = 1; $count <= $int1; $count++){
+            $goukei += $hyakuRandom;
+        }
+        $random_array['sum'] = $goukei;
+
         return $random_array;
     }
 ?>
@@ -25,7 +31,7 @@
 <?php 
     $randomInsu = rand(1, 15);
     $random = randomRecursiveClac($randomInsu);
-    $goukei = $random['num'];
+    $goukei = $random['sum'];
     
     echo("処理回数:".$randomInsu."</br>合計:".$goukei."</br>");  
 ?>
@@ -39,14 +45,15 @@ table tr:nth-child(odd) td {
 </style>
 <table border = 1 >
 	<!--行の処理内容-->
-    <?php foreach ($random['rand_num'] as $key => $val){ ?>
-    <tr>
-    <!--一行目の処理-->
-    <td><?php echo("$key") ?> </td>
-    <!--二行目の処理-->　
-    <td> <?php echo("$val") ?> </td>
+    <?php 
+        foreach ($random['rand_num'] as $key => $val){ 
+    //一行目の処理
+        echo("<tr><td>$key</td>");
+    //二行目の処理
+        echo("<td>$val</td></tr>");
+    ?> 
     
-    </tr>
+    
     <?php } ?>
 </table>
 </body>
