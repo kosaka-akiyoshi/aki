@@ -2,11 +2,16 @@
     // ここに回答を追記する
     $sum = 0;
     session_start();
-    $sum = $_SESSION['sum'];
+    if(isset($_SESSION['sum'])){
+        $sum = $_SESSION['sum'];
+    }else{
+        $_SESSION['sum'] = 0;
+    }
 
     if(isset($_POST['save'])){
         $sum += $_POST['money'];
     }elseif(isset($_POST['clear'])){
+        session_destroy();
         $sum = 0;
     }
     $_SESSION['sum'] = $sum;

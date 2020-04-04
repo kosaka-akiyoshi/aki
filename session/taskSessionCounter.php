@@ -7,15 +7,10 @@
     }
 
 // ここに回答を追記する
+    session_start();
     if($_GET['clear'] == 0){
-        session_start();
-        if(isset($_SESSION['access'])){
-            $_SESSION['access']++;
-        }else{
-            $_SESSION['access'] = 1;
-        } 
+        $_SESSION['access']++;
     }else{
-        session_start();
         $_SESSION['access'] = 1;
     };
     
