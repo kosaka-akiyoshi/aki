@@ -13,13 +13,7 @@ function display(string $string)
 
 // ここに回答を追記
 if(isset($_GET['color'])){
-    if($_GET['color'] == 'blue'){
-        $color = '#0000FF'; //青
-    }elseif($_GET['color'] == 'red'){
-        $color = '#FF0000'; //赤
-    }elseif($_GET['color'] == 'green'){
-        $color = '#008000'; //緑
-    }
+    $color = $_GET['color'];
     setcookie('color',$color);
     $text = '色を設定しました！';
 }else{ 
