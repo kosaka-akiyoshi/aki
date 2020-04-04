@@ -1,6 +1,4 @@
-<?php
 
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -18,7 +16,8 @@
         insert into country values(4,'フランス','ヨーロッパ','フランス語',33);
         insert into country values(5,'イギリス','ヨーロッパ','英語',44);
     );
-?></p>
+?>
+</p>
 
 <p>
 <?php 
@@ -29,7 +28,8 @@
         insert into heritage values(5,'ナポリ歴史地区',2,'文化');
         insert into heritage values(6,'富士山',1,'自然');
         insert into heritage values(7,'ヴェルサイユの宮殿と庭園',4,'文化');
-    ); ?></p>
+    ); 
+?></p>
 </body>
 <body>
 </body>
