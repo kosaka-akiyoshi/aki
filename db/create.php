@@ -13,7 +13,7 @@
 <p>
 <?php 
     echo (create table country (id int auto_increment primary key not null
-        , name varchar(20) not null, area varchar(10), lang varchar(10) default 'english' 
+        , name varchar(20) not null, area varchar(10), lang varchar(10) default '英語' 
         , number int not null default 0)); 
 ?>
 </p>
