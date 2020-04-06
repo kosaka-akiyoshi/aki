@@ -13,7 +13,7 @@
         echo(select name, area from country where area = 'ヨーロッパ';
         select name, area from country where area != 'ヨーロッパ';
         select name, lang from country where lang = '英語';
-        select name, area, lang from country where area = 'ヨーロッパ' and where lang = '英語';
+        select name, area, lang from country where area = 'ヨーロッパ' and lang = '英語';
         select * from country where area = 'ヨーロッパ' or number < 40;
         ); 
     ?>
