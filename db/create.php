@@ -18,7 +18,7 @@
 <p>
 <?php 
     echo (create table heritage(id int auto_increment primary key not null
-        , name varchar(20) not null, countly_id int not null, type varchar(2) not null)); 
+        , name varchar(20) not null, country_id int not null, type varchar(2) not null)); 
 ?>
 </p>
 </body>
