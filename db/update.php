@@ -10,19 +10,9 @@
 <p>
     <?php 
         echo( //task1-1
-            update 
-                country 
-            set 
-                area = '東アジア' 
-            where 
-                id = 1;
+            update country set area = '東アジア' where id = 1;
             //task1-2
-            update 
-                heritage 
-            set 
-                name = '富士山－信仰の対象と芸術の泉', type = '文化' 
-            where 
-                id = 6;
+            update heritage set name = '富士山－信仰の対象と芸術の泉', type = '文化' where id = 6;
         ); 
 ?>
 </p>
