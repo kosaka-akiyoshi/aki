@@ -18,11 +18,10 @@
             inner join heritage as he on cy.id = he.country_id where cy.area = 'ヨーロッパ';
             //task3
             select cy.name as cy_name, cy.number as cy_number, he.name as he_name from country as cy 
-            inner join heritage as he on cy.id = he.country_id where cy.number >= 40;
+            inner join heritage as he on cy.id = he.country_id where cy.number >= 40 and he.type = '文化';
             //task4
             select cy.name as cy_name, he.name as he_name from country as cy
-            left join  heritage as he on cy.id = he.country_id where cy.name in 
-            ('日本','イタリア','アメリカ合衆国','フランス','イギリス') and he.type = '自然';
+            left join  heritage as he on cy.id = he.country_id he.type = '自然';
         ); 
     ?>
 </p>
