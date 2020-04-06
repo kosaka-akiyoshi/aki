@@ -10,24 +10,25 @@
 <body>
 <p>
 <?php 
-    echo(insert into country values(1,'日本','アジア','日本語',81);
-        insert into country values(2,'イタリア','ヨーロッパ','イタリア語',39);
-        insert into country values(3,'アメリカ合衆国','北アメリカ','英語',1);
-        insert into country values(4,'フランス','ヨーロッパ','フランス語',33);
-        insert into country values(5,'イギリス','ヨーロッパ','英語',44);
+    echo(insert into country (id, name, area, lang, number) values(1,'日本','アジア','日本語',81);
+    insert into country (name, area, lang, number) values('イタリア','ヨーロッパ','イタリア語',39);
+            insert into country (name, area, lang, number) values('アメリカ合衆国','北アメリカ','英語',1);
+            insert into country (name, area, lang, number) values('フランス','ヨーロッパ','フランス語',33);
+            insert into country (name, area, lang, number) values('イギリス','ヨーロッパ','英語',44);
     );
 ?>
 </p>
 
 <p>
 <?php 
-    echo(insert into heritage values(1,'自由の女神像',3,'文化');
-        insert into heritage values(2,'小笠原諸島',1,'自然');
-        insert into heritage values(3,'姫路城',1,'文化');
-        insert into heritage values(4,'ロンドン塔',5,'文化');
-        insert into heritage values(5,'ナポリ歴史地区',2,'文化');
-        insert into heritage values(6,'富士山',1,'自然');
-        insert into heritage values(7,'ヴェルサイユの宮殿と庭園',4,'文化');
+    echo(insert into heritage (id, name, country_id, type) values(1,'自由の女神像',3,'文化');
+    insert into heritage (name, country_id, type) values('小笠原諸島',1,'自然');
+    insert into heritage (name, country_id, type) values('姫路城',1,'文化');
+    insert into heritage(name, country_id, type) values('ロンドン塔',5,'文化');
+    insert into heritage (name, country_id, type) values('ナポリ歴史地区',2,'文化');
+    insert into heritage (name, country_id, type) values('富士山',1,'自然');
+    insert into heritage (name, country_id, type) values('ヴェルサイユの宮殿と庭園',4,'文化');
+        id name country_id type 
     ); 
 ?></p>
 </body>
