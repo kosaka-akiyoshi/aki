@@ -52,8 +52,6 @@ table tr:nth-child(odd) td {
     //二行目の処理
         echo("<td>$val</td></tr>");
     ?> 
-    
-    
     <?php } ?>
 </table>
 </body>

@@ -4,37 +4,37 @@
     function calcNumber(int $int1, int $int2, bool $bool1) :int
     {
         if($bool1){   
-            $pulass = $int1 + $int2;
-            return $pulass;
+            $pulas = $int1 + $int2;
+            return $pulas;
         }
         else{  
-            $mainass = $int1 - $int2;
-            return $mainass;
+            $mainas = $int1 - $int2;
+            return $mainas;
         }
     };
     //task2
     $kaizyou = function (int $int3, bool $bool2): int
     {
         if($bool2){
-            $answer1 = $int3 * $int3;
-            return $answer1;
+            $kakeru2 = $int3 * $int3;
+            return $kakeru2;
         }
         else{   
-            $answer2 = $int3 * $int3 * $int3;
-            return $answer2;
+            $kakeru3 = $int3 * $int3 * $int3;
+            return $kakeru3;
         }
     };
     
     //task3 - 1
-    function calcAverage(array $array1): int
+    function calcAverage(array $array): int
     {
-        $allTensu = 0;
-        foreach ($array1 as $key => $val){
-            $allTensu += $val;
+        $allScore = 0;
+        foreach ($array as $key => $value){
+            $allScore += $value;
         }
-        $tensuElement = count($array1);
-        $averageData1 = round($allTensu / $tensuElement, 0);
-        return $averageData1;
+        $scoreElement = count($array);
+        $averageScore = round($allScore / $scoreElement, 0);
+        return $averageScore;
     };
 
     //task3 - 2
@@ -43,21 +43,20 @@
         $new_array1 = [];
         $new_array2 = [];
         foreach($array1 as $key1 => $value1) {
-            $yoso1 = $array1[$key1];
-            $new_array1[] = $yoso1;
+            $val1 = $array1[$key1];
+            $new_array1[] = $val1;
         };   
 
         foreach($array2 as $key2 => $value2) {
-            $yoso2 = $array2[$key2];
-            $new_array2[] = $yoso2;
+            $val2 = $array2[$key2];
+            $new_array2[] = $val2;
         };    
 
-        $hikaku_array = [];
-        for($count = 0; $count < 5; $count++) {
-            $atai1 = $new_array1[$count];
-            $atai2 = $new_array2[$count];
+        foreach($new_array1 as $key3 => $value3) {
+            $atai1 = $new_array1[$key3];
+            $atai2 = $new_array2[$key3];
             $atai = $atai2 - $atai1;
-            $hikaku_array[$count] = $atai;
+            $hikaku_array[$key3] = $atai;
         };
         return $hikaku_array;  
     };
@@ -70,6 +69,4 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>taskExternal</title>
 </head>
-<body>
-</body>
 </html>

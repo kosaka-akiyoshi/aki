@@ -52,7 +52,6 @@
     }
     createRandomNumberArrayAndDisplay();
 
-    
     $data = 
     [
         47,
