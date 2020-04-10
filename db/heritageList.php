@@ -6,17 +6,18 @@
         'password'
     );
 
+    $selectText = 
+        'select cy.name as cy_name, cy.area as cy_area, he.name as he_name 
+        from country as cy inner join heritage as he on cy.id = he.country_id';
+
     if(isset($_GET['id'])){
-        $stmt = $pdo->prepare('select cy.name as cy_name, cy.area as cy_area, he.name as he_name 
-        from country as cy inner join heritage as he on cy.id = he.country_id where he.id = :id');
+        $stmt = $pdo->prepare("$selectText where he.id = :id");
         $stmt->bindValue(':id',$_GET['id']);
         $stmt->execute();
-        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }else{
-        $stmt = $pdo->query('select cy.name as cy_name, cy.area as cy_area, he.name as he_name 
-        from country as cy inner join heritage as he on cy.id = he.country_id');
-        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $pdo->query($selectText);
     }
+    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -36,13 +37,14 @@
     echo('</pre>');
     */
 ?>
+
     <table border = 1 >
-    <?php 
-    echo(
-        "<tr><td><b>世界遺産名</b></td>
-        <td><b>国</b></td>
-        <td><b>地域</b></td></tr>"
-    );
+    <tr>
+        <th>世界遺産名</th>
+        <th>国</th>
+        <th>地域</th>
+    </tr>
+    <?php
     foreach ($records as $eachRecord){ 
         echo("<tr>");
         foreach($eachRecord as $value){
@@ -52,8 +54,7 @@
     }
     ?>
     </table>
-</p>
-    
+</p>   
 </body>
 <body>
 </body>
