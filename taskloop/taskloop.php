@@ -96,52 +96,62 @@
 </p>
 <p> 
     <table border = 1 >
-    <?php  
-    //1行目
-    foreach ($grade as $tensu_array){
-        $kyouka_namae_array = array_keys($tensu_array);
-    }
-    echo("<tr><td>名前</td>");
-    foreach($kyouka_namae_array as $kyouka){
-        echo("<td>".$kyouka."</td>");
-    }
-    echo("<td>平均</td></tr>");
-    $totalPasonalPoint = 0;
-    $menberCount = count($grade);
-    //2から7行目
-    foreach($grade as $menber => $tensu_array){
-        $kokugo_array = array_column($grade, '国語');
-        $sugaku_array = array_column($grade, '数学');
-        $rika_array = array_column($grade, '理科');
-        $syakai_array = array_column($grade, '社会');
-        $eigo_array = array_column($grade, '英語');
-        echo("<tr><td>".$menber."</td>");
+  
+    <!-- ヘッダ部分 -->
+    <tr>
+        <th>名前</th>
+        <th>国語</th>
+        <th>数学</th>
+        <th>社会</th>
+        <th>理科</th>
+        <th>英語</th>
+        <th>平均</th>
+    </tr>
+    <?php
+        $allKokugoPoint = 0;
+        $allSugakuPoint = 0;
+        $allSyakaiPoint = 0;
+        $allRikaPoint = 0;
+        $allEigoPoint = 0;
+        $totalPasonalPoint = 0;
+        $menberCount = count($grade);
 
-        foreach($tensu_array as $tensu){
-            echo("<td>".$tensu."</td>");
+        //1から6行目
+        foreach($grade as $menber => $tensu_array){
+            echo("<tr><td>".$menber."</td>");
+            foreach($tensu_array as $tensu){
+                echo("<td>".$tensu."</td>");
+            }
+            $memberAllPoint = array_sum($tensu_array);
+            $kyoukaCount = count($tensu_array);
+            $menberAveragePoint = round($memberAllPoint / $kyoukaCount, 1);
+            echo('<td>'.$menberAveragePoint.'</td></tr>');
+            
+            $allKokugoPoint += $tensu_array['国語'];
+            $allSugakuPoint += $tensu_array['数学'];
+            $allSyakaiPoint += $tensu_array['社会'];
+            $allRikaPoint += $tensu_array['理科'];
+            $allEigoPoint += $tensu_array['英語'];
+            $totalPasonalPoint += $menberAveragePoint;
         }
-        $memberPoint = array_sum($tensu_array);
-        $subjectElement = count($tensu_array);
-        $menberAveragePoint = round($memberPoint / $subjectElement, 1);
-        $totalPasonalPoint += $menberAveragePoint;
-        echo('<td>'.$menberAveragePoint.'</td></tr>');
-    }
-    //8行目
-    echo("<tr><td>平均</td>");
-    $kyouka_array = [];
-    $kyouka_array[] = $kokugo_array;
-    $kyouka_array[] = $sugaku_array;
-    $kyouka_array[] = $syakai_array;
-    $kyouka_array[] = $rika_array;
-    $kyouka_array[] = $eigo_array;
+    ?>
+    <!-- 7行目 -->
+    <tr>
+        <td>平均</td>
+    <?php
+        $averageKokugoPoint = round($allKokugoPoint / $menberCount,1);
+        $averageSugakuPoint = round($allSugakuPoint / $menberCount,1);
+        $averageSyakaiPoint = round($allSyakaiPoint / $menberCount,1);
+        $averageRikaPoint = round($allRikaPoint / $menberCount,1);
+        $averageEigoPoint = round($allEigoPoint / $menberCount,1);
+        $averageAverage = round($totalPasonalPoint / $menberCount, 1);
 
-    foreach($kyouka_array as $kyouka_tensu_array){
-        $kyoukaPoint = array_sum($kyouka_tensu_array);
-        $kyoukaAveragePoint = round($kyoukaPoint / $menberCount, 1);
-        echo("<td>".$kyoukaAveragePoint."</td>");
-    }
-    $averageAverage = round($totalPasonalPoint / $menberCount, 1);
-    echo("<td>".$averageAverage."</td></tr>");
+        echo("<td>".$averageKokugoPoint."</td>");
+        echo("<td>".$averageSugakuPoint."</td>");
+        echo("<td>".$averageSyakaiPoint."</td>");
+        echo("<td>".$averageRikaPoint."</td>");
+        echo("<td>".$averageEigoPoint."</td>");
+        echo("<td>".$averageAverage."</td></tr>");
     ?>
 </table>
 </p>
