@@ -18,6 +18,7 @@
     $rina = new dorakue('りな','女', '魔法使い', 16, 11, 5, 4);
     $takashi = new dorakue('たかし', '男', '僧侶', 18, 8, 9, 6);
 
+    //task2-2
     $youko_kougeki = $youko->getAttackPower();
     $rina_bougyo = $rina->getDefensivePower();
     $takashi_kougeki = $takashi->getAttackPower();
@@ -28,8 +29,6 @@
     echo("<pre>$takashi->name"."の攻撃力は$takashi_kougeki"."です。</pre>");    
     echo("<pre>$takashi->name"."の防御力は$takashi_bougyo"."です。</pre>");    
     ?>
-  
-</body>
-<body>
+</P>
 </body>
 </html>

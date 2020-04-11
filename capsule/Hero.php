@@ -1,6 +1,4 @@
-<?php
 
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -58,13 +56,7 @@
             $bougyo = $this->defence;
             return $bougyo;
         }
-        
-
-
     }
-    
-    
-    
     ?>
 </p>
     
