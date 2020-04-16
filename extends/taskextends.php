@@ -17,21 +17,16 @@
 <p>
     <?php    
     //task3-1
-    $Hero = new dorakue('村人A','男', '村人', 5, 5, 5, 5);
+    $Villager = new Hero('村人A','男', '村人', 5, 5, 5, 5);
     $Brave = new Brave('ようこ', '女','勇者', 24, 6, 13, 8);
     $Witch = new Witch('りな','女', '魔法使い', 16, 11, 5, 4);
     $Priest = new priest('たかし', '男', '僧侶', 18, 8, 9, 6);
 
     //task3-2
-    $Hero_kougeki = $Hero->attack();
-    $Brave_kougeki = $Brave->attack();
-    $Witch_kougeki = $Witch->attack();
-    $Priest_kaihuku = $Priest->attack();
-
-    echo("<pre>$Hero_kougeki</pre>");
-    echo("<pre>$Brave_kougeki</pre>");
-    echo("<pre>$Witch_kougeki</pre>");    
-    echo("<pre>$Priest_kaihuku</pre>");    
+    echo('<pre>'.$Villager->attack().'</pre>');
+    echo('<pre>'.$Brave->attack().'</pre>');
+    echo('<pre>'.$Witch->attack().'</pre>');    
+    echo('<pre>'.$Priest->attack().'</pre>');    
     ?>
 </P>
 </body>

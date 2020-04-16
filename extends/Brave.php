@@ -14,11 +14,10 @@
 <p>
     <?php
     //task2-1 
-    class Brave extends dorakue {
+    class Brave extends Hero {
         public function attack(): string
         {
-            $sword_attackHyouji = '剣で攻撃しました！';
-            return $sword_attackHyouji;
+            return '剣で攻撃しました！';
         }
     }
     ?>
