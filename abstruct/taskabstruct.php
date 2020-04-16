@@ -6,7 +6,6 @@
     require_once("priest.php");
     require_once("Playman.php");
     require_once("Party.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -30,17 +29,15 @@
     $witch_add_str = $yusya->addHero($witch);
     $priest_add_str = $yusya->addHero($priest);
     $playman_add_str = $yusya->addHero($playman);
-    $playman_add_str = $yusya->addHero($playman);
+    $playman_add_str2 = $yusya->addHero($playman);
     
-    echo("<pre>"."$witch_add_str"."</pre>");
-    echo("<pre>"."$priest_add_str"."</pre>");
-    echo("<pre>"."$playman_add_str"."</pre>");
-    echo("<pre>"."$playman_add_str"."</pre>");
+    echo("<pre>".$witch_add_str."</pre>");
+    echo("<pre>".$priest_add_str."</pre>");
+    echo("<pre>".$playman_add_str."</pre>");
+    echo("<pre>".$playman_add_str2."</pre>");
 
-    $yusya->allHeroAttack();
-   
-    
-?>
+    $yusya->allHeroAttack();    
+    ?>
 </P>
 </body>
 </html>

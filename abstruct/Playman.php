@@ -13,7 +13,6 @@
 <body>
 <p>
     <?php
-    //task1 
     class Playman extends Hero {
         public function attack(): string
         {   
@@ -28,8 +27,5 @@
     }
     ?>
 </p>
-  
-</body>
-<body>
 </body>
 </html>

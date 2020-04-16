@@ -24,9 +24,7 @@
 
         //コンストラクタ(クラス内)
         public function __construct(
-            string $name, string $gender, string $profession
-            , int $HP, int $MP, int $attack, int $defence
-        )
+            string $name, string $gender, string $profession, int $HP, int $MP, int $attack, int $defence)
         {
             $this->name = $name;
             $this->gender = $gender;
@@ -48,15 +46,13 @@
         //攻撃力
         public function getAttackPower(): int
         {
-            $bougyoryoku = $this->attack;
-            return $kougekiryoku;
+            return $this->attack;
         }
         
         //防御力
         public function getDefensivePower(): int
         {
-            $bougyoryoku = $this->defence;
-            return $bougyoryoku;
+            return $this->defence;
         }
 
         //task1-3
@@ -64,9 +60,6 @@
         abstract public function attack();
     }
     ?>
-</p>
-    
-</body>
-<body>
+</p>  
 </body>
 </html>
