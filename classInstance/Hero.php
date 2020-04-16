@@ -1,6 +1,4 @@
-<?php
 
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,7 +12,7 @@
     <?php 
     //task1
     //クラス
-    class dorakue {
+    class Hero {
         public $name;
         private $gender;
         private $Profession;
@@ -24,10 +22,8 @@
         private $defence;
 
         //コンストラクタ(クラス内)
-        public function __construct(
-            string $name, string $gender, string $profession
-            , int $HP, int $MP, int $attack, int $defence
-        ){
+        public function __construct(string $name, string $gender, string $profession, int $HP, int $MP, int $attack, int $defence)
+        {
             $this->name = $name;
             $this->gender = $gender;
             $this->profession = $profession;
@@ -44,15 +40,8 @@
                 , $this->MP, $this->attack, $this->defence);
             return $status;
         }
-
-    }
-    
-    
-    
+    }    
     ?>
 </p>
-    
-</body>
-<body>
 </body>
 </html>
