@@ -17,8 +17,7 @@
     class Priest extends Hero {
         public function attack(): string
         {
-            $priest_attackHyouji = '魔法で味方を回復しました！';
-            return $priest_attackHyouji;
+            return '魔法で味方を回復しました！';
         }
     }
     ?>

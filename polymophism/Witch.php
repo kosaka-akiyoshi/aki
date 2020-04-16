@@ -17,8 +17,7 @@
     class Witch extends Hero {
         public function attack(): string
         {
-            $magic_attackHyouji = '魔法で攻撃しました！';
-            return $magic_attackHyouji;
+            return '魔法で攻撃しました！';
         }
     }
     ?>

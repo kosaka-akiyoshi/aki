@@ -6,7 +6,6 @@
     require_once("priest.php");
     require_once("Playman.php");
     require_once("Party.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -25,9 +24,9 @@
     $witch = new Witch('りな','女', '魔法使い', 16, 11, 5, 4);
     $priest = new priest('たかし', '男', '僧侶', 18, 8, 9, 6);
     $playman = new Playman('みつや', '男', '遊び人', 16, 7, 7, 7);
-
-    //task3-2
     $yusya = new Party($brave);
+
+    //task3-2    
     $witch_add_str = $yusya->addHero($witch);
     $priest_add_str = $yusya->addHero($priest);
     $playman_add_str = $yusya->addHero($playman);
@@ -38,10 +37,8 @@
     echo("<pre>"."$playman_add_str"."</pre>");
     echo("<pre>"."$villager_add_str"."</pre>");
 
-    $yusya->allHeroAttack();
-   
-    
-?>
+    $yusya->allHeroAttack();   
+    ?>
 </P>
 </body>
 </html>

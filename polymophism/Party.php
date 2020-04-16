@@ -22,7 +22,6 @@
         //task2-3
         private $party = [];
 
-        
         //task2-4
         public function __construct(Hero $Hero_class)
         {
@@ -33,12 +32,11 @@
         public function addHero(Hero $Hero_class): string
         {
             //echo(count($this->party));
-            $this->party[] = $Hero_class;
-            if(count($this->party) <= Party::PARTY_LIMIT){
-                $add_str = $Hero_class->name."が仲間になりました！";
-            }else{
+            if(count($this->party) == Party::PARTY_LIMIT){
                 $add_str = 'パーティの上限数に達しています。';
-                array_pop($this->party);
+            }else{
+                $this->party[] = $Hero_class;
+                $add_str = $Hero_class->name."が仲間になりました！";
             }
             return $add_str;
         }
@@ -48,15 +46,12 @@
         {
             //echo(count($this->party));
             foreach($this->party as $Hero_class){
-                echo("<pre>"."$Hero_class->name"."のターンです。</pre>");
+                echo("<pre>".$Hero_class->name."のターンです。</pre>");
                 echo("<pre>".$Hero_class->attack()."</pre>");
             }
         }
     }
     ?>
 </p>
-  
-</body>
-<body>
 </body>
 </html>

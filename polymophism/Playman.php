@@ -23,13 +23,10 @@
             }elseif($rand_num >= 7){
                 $knife_hyouji = '口笛を吹きスライムを呼び寄せた。。。';
             }
-        return $knife_hyouji;
+            return $knife_hyouji;
         }
     }
     ?>
 </p>
-  
-</body>
-<body>
 </body>
 </html>
