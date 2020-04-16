@@ -14,9 +14,9 @@
 <p>
     <?php    
     //task2-1
-    $youko = new dorakue('ようこ', '女','勇者', 24, 6, 13, 8);
-    $rina = new dorakue('りな','女', '魔法使い', 16, 11, 5, 4);
-    $takashi = new dorakue('たかし', '男', '僧侶', 18, 8, 9, 6);
+    $youko = new Hero('ようこ', '女','勇者', 24, 6, 13, 8);
+    $rina = new Hero('りな','女', '魔法使い', 16, 11, 5, 4);
+    $takashi = new Hero('たかし', '男', '僧侶', 18, 8, 9, 6);
 
     //task2-2
     $youko_kougeki = $youko->getAttackPower();

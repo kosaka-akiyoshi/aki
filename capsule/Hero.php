@@ -11,7 +11,7 @@
 <p>
     <?php 
     //クラス
-    class dorakue {
+    class Hero {
         public $name;
         private $gender;
         private $Profession;
@@ -21,10 +21,8 @@
         private $defence;
 
         //コンストラクタ(クラス内)
-        public function __construct(
-            string $name, string $gender, string $profession
-            , int $HP, int $MP, int $attack, int $defence
-        ){
+        public function __construct(string $name, string $gender, string $profession, int $HP, int $MP, int $attack, int $defence)
+        {
             $this->name = $name;
             $this->gender = $gender;
             $this->profession = $profession;
@@ -46,15 +44,13 @@
         //攻撃力
         public function getAttackPower(): int
         {
-            $kougeki = $this->attack;
-            return $kougeki;
+            return $this->attack;
         }
         
         //防御力
         public function getDefensivePower(): int
         {
-            $bougyo = $this->defence;
-            return $bougyo;
+            return $this->defence;
         }
     }
     ?>
