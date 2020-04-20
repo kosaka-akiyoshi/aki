@@ -18,29 +18,31 @@
         private $party = [];
         public function __construct(Hero $Hero_class)
         {
-            $this->party[] = $Hero_class;
+            $this->party[$Hero_class->name] = $Hero_class;
         }
         //task2
         public function addHero(Hero $Hero_class): string
         {
-            $addFlug = false;
+            /*$addFlug = false;
             foreach($this->party as $already_hero)
                 if($already_hero->name == $Hero_class->name){
-                    $addFlug = true;
-                    break;
+                    //$addFlug = true;
+                    //break;
                 }
-            if($addFlug){
+            if($addFlug){*/
+            if(isset($this->party[$Hero_class->name])){
                 $add_str = $Hero_class->name."はすでに仲間にいます。";
-                return $add_str;    
+                //return $add_str;    
             }else{
                 if(count($this->party) == Party::PARTY_LIMIT){ 
                     $add_str = 'パーティの上限数に達しています。';    
                 }else{
-                    $this->party[] = $Hero_class;
+                    $this->party[$Hero_class->name] = $Hero_class;
                     $add_str = $Hero_class->name."が仲間になりました！";
                 }
-                return $add_str;
+                //return $add_str;
             }
+            return $add_str;
         }
 
         public function allHeroAttack()
