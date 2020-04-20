@@ -31,7 +31,7 @@
         {
             foreach($this->enemyGroup as $enemy){
                 echo ('<pre>'.$enemy->getName().'の攻撃！</pre>');
-                echo('<pre>'.$enemy->getAttackMessage().'</pre>');
+                echo('<pre>'.$enemy->getName().$enemy->getAttackMessage().'</pre>');
             }            
         }
     }

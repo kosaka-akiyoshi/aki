@@ -26,7 +26,7 @@
         }
         public function getAttackMessage(): string
         {
-            $attackMessage = '噛みついてきた！';
+            $attackMessage = 'が噛みついてきた！';
             return $attackMessage;
         }
         public function getEncountMessage(): string

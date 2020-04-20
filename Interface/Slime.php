@@ -26,7 +26,7 @@
         }
         public function getAttackMessage(): string
         {
-            $attackMessage = '体当たりしてきた！';
+            $attackMessage = 'が体当たりしてきた！';
             return $attackMessage;
         }
         public function getEncountMessage(): string
